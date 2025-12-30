@@ -22,7 +22,7 @@ export const data = [
         title: "Career of IT",
         duration: "2020-2023",
         description: "56789",
-        skill: ["Glide", "MySQL"],
+        skill: ["Glide", "MySQL", "React.js"],
         material: [
         ],
     },
