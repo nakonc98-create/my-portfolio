@@ -7,10 +7,10 @@ import Title from "./Title"
 
 const Content = (props) => {
 
-    const SECTION_ID = '${props.title}-section'
+    const SECTION_ID = `${props.title}-section`
 
     return (
-        <div id={SECTION_ID}>
+        <div id={SECTION_ID} className='scroll-m-14'>
             <div className='font-semibold mb-3'>{props.title}</div>
             {props.data.map((e,i) => (
                 <div className='grid grid-cols-[30%_70%] hover:bg-blue-800/15 duration-200 px-3 py-6 rounded-md' key={i}>
@@ -27,6 +27,7 @@ const Content = (props) => {
                 </div>
             ))}
         </div>
+        
     )
 }
 
