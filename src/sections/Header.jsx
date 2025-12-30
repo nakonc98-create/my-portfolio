@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <div className='flex flex-col gap-2'>
         <div className='text-3xl font-semibold'>{data.name}</div>
-        <div className='font-semibold'>{data.title}</div>
-        <div className='text-sm w-5/6'>{data.caption}</div>
+        <div className='font-semibold text-xl text-blue-300'>{data.title}</div>
+        <div className='w-5/6'>{data.caption}</div>
         <div className='mt-4 font-semibold'>
             <a href={data.resume}>
                 <span className='bg-blue-900 py-2 px-2 rounded-md hover:bg-white hover:text-blue-900 duration-300'>
