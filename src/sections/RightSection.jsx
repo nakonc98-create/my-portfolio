@@ -4,15 +4,16 @@ import { data as certData , title as certTitle} from '../contents/certificate'
 import Content from "../components/Content"
 import About from "./About"
 import Footer from "./Footer"
+import Certificate from './Certificate'
 
 const RightSection = (props) => {
   return (
     <div className="pt-14 bg-black/50">
-      <div className='flex flex-col gap-y-80 px-7'>
+      <div className='flex flex-col gap-y-40 px-7'>
         <About onInitial={props.onInitial}/>
         <Content title={expTitle} data={expData}/>
         <Content title={proTitle} data={proData}/>
-        <Content title={certTitle} data={certData}/>
+        <Certificate title={certTitle} data={certData}/>
         <Footer/>
       </div>
     </div>
