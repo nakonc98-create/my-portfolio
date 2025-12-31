@@ -1,7 +1,7 @@
 
 const Title = (props) => {
   return (
-    <div>
+    <div className="text-blue-300 ">
         {props.value}
     </div>
   )

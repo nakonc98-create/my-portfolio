@@ -11,7 +11,7 @@ const Content = (props) => {
 
     return (
         <div id={SECTION_ID} className='scroll-m-14'>
-            <div className='font-semibold mb-3'>{props.title}</div>
+            <div className='font-semibold text-xl text-blue-500 mb-3'>{props.title}</div>
             {props.data.map((e,i) => (
                 <div className='grid grid-cols-[30%_70%] hover:bg-blue-800/15 duration-200 px-3 py-6 rounded-md' key={i}>
                     <div className="flex flex-col gap-y-4">
