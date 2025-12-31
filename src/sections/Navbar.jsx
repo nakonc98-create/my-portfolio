@@ -31,7 +31,7 @@ const Navbar = () => {
               onMouseEnter={() => setIsHover(e.title)} 
               onMouseLeave={() => setIsHover(null)}
               className={`flex cursor-pointer py-3 px-4 rounded-md transition-all
-                ${activeNav === e.title ? "text-blue-300 bg-blue-800/15" : "hover:text-blue-300 hover:bg-blue-800/15"}`}
+                ${activeNav === e.title ? "bg-blue-300/15 text-blue-500" : "hover:bg-blue-300/30 hover:text-blue-500"}`}
             >
               <div className='w-6'>
                 <FontAwesomeIcon 
