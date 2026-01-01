@@ -7,34 +7,10 @@ export const data = [
     {
         id: 1,
         title: "คณะสัตวแพทยศาสตร์ มหาวิทยาลัยสงขลานครินทร์ - ฝึกงานตำแหน่ง IT Support",
-        duration: "17เม.ย.2566 - 12มิ.ย.2566",
-        description: "12345",
-        skill: ["React.js", "Node.js","MySQL","MySQL","MySQL","MySQL","MySQL","MySQL","MySQL","MySQL","MySQL","MySQL","MySQL","MySQL","MySQL","MySQL","MySQL","MySQL"],
+        duration: "17 เม.ย. 2566 - 12 มิ.ย. 2566",
+        description: "        ฝึกงานตำแหน่งไอทีซัพพอร์ทโดยใช้เครื่องมือของ Microsoft Office 365 อย่างเช่น Microsoft Power Apps , Microsoft Power Automate , Microsoft Power BI , Microsoft List , Microsoft Sharepoint เพื่อผลิตซอฟแวร์ช่วยงานตรวจสอบตู้ไฟฟ้าที่ชํารุดภายในอาคาร",
+        skill: ["Microsoft Power App", "Microsoft Power Automate","Microsoft Power BI","Microsoft List","Microsoft Sharepoint"],
         material: [
-            { icon: faGithub, link: "https://www.google.com/"},
-            { icon: faFileLines, link: "https://www.google.com/"},
-            { icon: faYoutube, link: ""},
-            { icon: faGlobe , link: "https://www.google.com/"},
-        ],
-    },
-    {
-        id: 2,
-        title: "Career of IT",
-        duration: "2020-2023",
-        description: "56789",
-        skill: ["Glide", "MySQL", "React.js"],
-        material: [
-        ],
-    },
-    {
-        id: 3,
-        title: "Career of IT",
-        duration: "2020-2023",
-        description: "56789",
-        skill: ["Glide"],
-        material: [
-            { icon: faGithub, link: "https://www.google.com/"},
-            { icon: faYoutube, link: "https://www.google.com/"},
         ],
     },
 ];

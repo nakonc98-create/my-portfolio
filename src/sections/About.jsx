@@ -1,9 +1,8 @@
-import { useEffect } from 'react';
 import { data } from '../contents/about'
 
-const SECTION_ID = `${data.title}-section`
+const About = () => {
 
-const About = (props) => {
+  const SECTION_ID = `${data.title}-section`
 
   return (
     <div id={SECTION_ID} className='scroll-m-14'>

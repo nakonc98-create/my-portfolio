@@ -1,5 +1,5 @@
 
-const Skill = (props) => {
+const Tech = (props) => {
   return (
         <div className='flex flex-wrap gap-x-2 text-sm gap-y-2'>
             {props.value.map((s,i) => (
@@ -9,4 +9,4 @@ const Skill = (props) => {
     )
 }
 
-export default Skill
+export default Tech

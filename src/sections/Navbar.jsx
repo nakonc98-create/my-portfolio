@@ -1,9 +1,10 @@
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const navs = [
   { title: "About", sectionId: "About-section"},
+  { title: "Skills", sectionId: "Skills-section"},
   { title: "Experience", sectionId: "Experience-section"},
   { title: "Project", sectionId: "Project-section"},
   { title: "Certificate", sectionId: "Certificate-section"},
@@ -11,15 +12,51 @@ const navs = [
 
 const Navbar = () => {
   const [isHover, setIsHover] = useState(null);
-  const [activeNav, setActiveNav] = useState(null);
+  const [activeNav, setActiveNav] = useState("About"); // ตั้งค่าเริ่มต้นให้ตรงกับตัวแรก
 
   const handleClick = (sectionId, title) => {
     setActiveNav(title);
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth"});
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const headerHeight = document.getElementById("header")?.offsetHeight || 0; // หาความสูง Header ถ้ามี
+      const offset = headerHeight + 100; // ปรับ offset ให้เหมาะสม (ประมาณ 100-150px)
+
+      // ตรวจสอบตำแหน่ง Scroll ปัจจุบัน
+      const scrollPosition = window.scrollY;
+
+      // ถ้าอยู่ที่จุดบนสุดของหน้าจอ ให้ Active เมนูแรกทันที (About)
+      if (scrollPosition === 0) {
+        setActiveNav(navs[0].title);
+        return;
+      }
+
+      for (const nav of navs) {
+        const section = document.getElementById(nav.sectionId);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          // เปลี่ยนเงื่อนไขเล็กน้อย:
+          // ถ้าขอบบนของ Section อยู่เหนือเส้น Offset และขอบล่างยังไม่พ้นเส้น Offset
+          if (rect.top <= offset && rect.bottom >= offset) {
+            setActiveNav(nav.title);
+            break; 
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // เรียกครั้งแรกเพื่อให้ทำงานทันทีที่โหลด
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className='flex flex-col font-semibold'>
+    <div className='hidden md:flex flex-col font-semibold pt-15'>
       {
         navs.map((e, i) => {
           const isShowArrow = isHover === e.title || activeNav === e.title;
@@ -52,4 +89,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
