@@ -11,6 +11,7 @@ const Skill = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        const currentEl = sectionRef.current;
         const observer = new IntersectionObserver(
             ([entry]) => {
                 // entry.isIntersecting คือค่า boolean (true = เห็น, false = ไม่เห็น)
@@ -22,13 +23,13 @@ const Skill = () => {
             }
         );
 
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
+        if (currentEl) {
+            observer.observe(currentEl);
         }
 
         return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
+            if (currentEl) {
+                observer.unobserve(currentEl);
             }
         };
     }, []);

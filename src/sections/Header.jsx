@@ -8,7 +8,7 @@ const Header = () => {
     const [isHover, setIsHover] = useState(false);
 
     return (
-        <div className='flex flex-col gap-2 mt-10 md:mt-0'>
+        <div className='flex flex-col gap-2 mt-10 md:mt-0' id="header">
             <div className='text-3xl text-blue-700 font-semibold'>{data.name}</div>
             <div className='font-semibold text-xl text-blue-500'>{data.title}</div>
             <div className="flex justify-center">
