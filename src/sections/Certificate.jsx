@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { data , title } from '../contents/certificate'
 
 const Certificate = (props) => {
 
-    const SECTION_ID = `${props.title}-section`;
+    const SECTION_ID = `${title}-section`;
     const [selectedCert, setSelectedCert] = useState(null);
 
     const closeModal = () => {
@@ -33,27 +34,27 @@ const Certificate = (props) => {
 
     return (
         <div id={SECTION_ID} className='scroll-m-14'>
-            <div className='font-semibold text-xl text-blue-500 mb-3'>{props.title}</div>
+            <div className='font-semibold text-xl text-blue-500 mb-3'>{title}</div>
             
             {/* Grid Container */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {props.data.map((e, i) => (
-                    <div className="p-4 md:p-8" key={i}>
+            <div className="grid grid-cols-1 md:grid-cols-3">
+                {data.map((e, i) => (
+                    <div className="p-4 md:p-2" key={i}>
                         <div 
                             className="h-full flex flex-col cursor-pointer rounded-xl bg-blue-900/50 overflow-hidden transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 shadow-lg group" 
                             onClick={() => setSelectedCert(e)}
                         >
-                            <div className="h-48 w-full overflow-hidden shrink-0">
+                            <div className="h-48 md:h-40 w-full overflow-hidden shrink-0">
                                 <img 
                                     src={e.image} 
                                     alt={e.title} 
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                             </div>
-                            <div className="p-5 flex flex-col flex-1">
+                            <div className="p-4 flex flex-col flex-1 text-sm">
                                 <h3 className="font-semibold mb-2 text-white">{e.title}</h3>
                                 <div className="mt-auto">
-                                    <p className="text-sm text-blue-300">สถาบัน: {e.institution} | {e.year}</p>
+                                    <p className="text-blue-300">สถาบัน: {e.institution} | {e.year}</p>
                                 </div>
                             </div>
                         </div>

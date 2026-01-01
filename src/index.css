@@ -36,3 +36,26 @@
 .animate-fadeIn {
   animation: fadeIn 0.2s ease-out forwards;
 }
+
+/* สร้าง Keyframe ชื่อ progressAnimation */
+@keyframes progressAnimation {
+  from {
+    transform: scaleX(0); /* เริ่มจากขนาด 0 (หดหายไป) */
+  }
+  to {
+    transform: scaleX(1); /* ขยายเต็มขนาดที่กำหนดไว้ (ตาม width %) */
+  }
+}
+
+/* คลาสเริ่มต้นของแท่ง Progress Bar */
+.progress-bar {
+  transform: scaleX(0); /* ค่าเริ่มต้นคือซ่อนไว้ (0) */
+  transform-origin: left; /* ให้ขยายจากซ้ายไปขวา */
+  /* ถ้าอยากให้ตอนรีเซ็ตมันหดกลับแบบมีอนิเมชั่น ให้ใส่ transition ตรงนี้ */
+  /* แต่ถ้าอยากให้รีเซ็ตวูบหายไปเลย (เพื่อรอเล่นใหม่) ไม่ต้องใส่ transition */
+}
+
+/* คลาสที่จะถูกเติมเมื่อ Scroll มาถึง */
+.progress-bar.animate {
+  animation: progressAnimation 1.5s ease-out forwards;
+}

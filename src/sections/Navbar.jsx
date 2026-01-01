@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 
 const navs = [
   { title: "About", sectionId: "About-section"},
+  { title: "Skills", sectionId: "Skills-section"},
   { title: "Experience", sectionId: "Experience-section"},
   { title: "Project", sectionId: "Project-section"},
   { title: "Certificate", sectionId: "Certificate-section"},
@@ -36,7 +37,6 @@ const Navbar = () => {
         const section = document.getElementById(nav.sectionId);
         if (section) {
           const rect = section.getBoundingClientRect();
-          
           // เปลี่ยนเงื่อนไขเล็กน้อย:
           // ถ้าขอบบนของ Section อยู่เหนือเส้น Offset และขอบล่างยังไม่พ้นเส้น Offset
           if (rect.top <= offset && rect.bottom >= offset) {
@@ -56,7 +56,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className='flex flex-col font-semibold'>
+    <div className='hidden md:flex flex-col font-semibold pt-15'>
       {
         navs.map((e, i) => {
           const isShowArrow = isHover === e.title || activeNav === e.title;

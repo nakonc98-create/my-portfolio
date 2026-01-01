@@ -1,5 +1,5 @@
 
 export const data = {
     title: "About",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa, illo, dolore dolor fugiat officiis eveniet cumque, nostrum totam magnam quam? Laborum officia libero dolore nesciunt ducimus, voluptatibus debitis ea!",
+    description: "ผมเป็นบัณฑิตจบใหม่สาขาวิศวกรรมคอมพิวเตอร์ที่มีความกระตือรือร้นและรักในการเขียนโค้ด มีพื้นฐานที่แข็งแกร่งในภาษาเช่น HTML, CSS, Javascrip เคยมีประสบการณ์พัฒนาโปรเจคชื่อ Development of a No Code Programming application to check the time attendance system บนแพลตฟอร์ม Glide ซึ่งช่วยแก้ปัญหาความยุ่งยากในการตรวจสอบรายชื่อผู้เข้าเรียนได้สำเร็จ ถึงแม้ว่าโปรเจคผมจะไม่ใช่การเขียนโค้ดแต่ก็พร้อมเรียนรู้เทคโนโลยีใหม่ๆและมุ่งมั่นที่จะเติบโตในสายงาน Programmer ร่วมกับทีมมืออาชีพ",
 }
