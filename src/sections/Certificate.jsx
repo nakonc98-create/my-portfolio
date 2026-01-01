@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { data , title } from '../contents/certificate'
 
-const Certificate = (props) => {
+const Certificate = () => {
 
     const SECTION_ID = `${title}-section`;
     const [selectedCert, setSelectedCert] = useState(null);
@@ -65,7 +65,7 @@ const Certificate = (props) => {
             {/* MODAL - Moved OUTSIDE the loop and conditioned on selectedCert */}
             {selectedCert && (
                 <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-fadeIn" // ใส่ animate-fadeIn ที่นี่
+                    className="fixed inset-0 z-100 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-fadeIn" // ใส่ animate-fadeIn ที่นี่
                     onClick={closeModal}
                 >
                     <div
