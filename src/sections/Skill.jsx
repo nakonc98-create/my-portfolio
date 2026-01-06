@@ -37,9 +37,9 @@ const Skill = () => {
   return (
     // ผูก Ref ไว้ที่กล่องใหญ่สุด
     <div ref={sectionRef} id={SECTION_ID} className="scroll-m-14 w-full">
-      <h2 className="font-bold text-2xl text-blue-600 mb-6">{data.title}</h2>
+      <h2 className="font-bold text-2xl text-blue-600 mb-10">{data.title}</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {data.items.map((skill, index) => (
           <div key={index} className="bg-blue-900/50 p-4 rounded-lg shadow-sm">
             <div className="flex justify-between items-center mb-2">

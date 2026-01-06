@@ -5,7 +5,7 @@ const Tools = () => {
 
   return (
     <div id={SECTION_ID} className="scroll-m-14 w-full">
-      <h2 className="font-semibold text-2xl text-blue-600 mb-6">
+      <h2 className="font-semibold text-2xl text-blue-600 mb-10">
         {data.title}
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
