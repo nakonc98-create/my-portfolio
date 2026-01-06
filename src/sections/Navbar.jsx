@@ -1,14 +1,15 @@
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState, useEffect } from 'react'
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState, useEffect } from "react";
 
 const navs = [
-  { title: "About", sectionId: "About-section"},
-  { title: "Skills", sectionId: "Skills-section"},
-  { title: "Experience", sectionId: "Experience-section"},
-  { title: "Project", sectionId: "Project-section"},
-  { title: "Certificate", sectionId: "Certificate-section"},
-]
+  { title: "About", sectionId: "About-section" },
+  { title: "Skills", sectionId: "Skills-section" },
+  { title: "Tools", sectionId: "Tools-section" },
+  { title: "Experience", sectionId: "Experience-section" },
+  { title: "Project", sectionId: "Project-section" },
+  { title: "Certificate", sectionId: "Certificate-section" },
+];
 
 const Navbar = () => {
   const [isHover, setIsHover] = useState(null);
@@ -16,8 +17,8 @@ const Navbar = () => {
 
   const handleClick = (sectionId, title) => {
     setActiveNav(title);
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth"});
-  }
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +42,7 @@ const Navbar = () => {
           // ถ้าขอบบนของ Section อยู่เหนือเส้น Offset และขอบล่างยังไม่พ้นเส้น Offset
           if (rect.top <= offset && rect.bottom >= offset) {
             setActiveNav(nav.title);
-            break; 
+            break;
           }
         }
       }
@@ -56,36 +57,46 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className='hidden md:flex flex-col font-semibold pt-15'>
-      {
-        navs.map((e, i) => {
-          const isShowArrow = isHover === e.title || activeNav === e.title;
+    <div className="hidden md:flex flex-col font-semibold pt-10">
+      {navs.map((e, i) => {
+        const isShowArrow = isHover === e.title || activeNav === e.title;
 
-          return (
-            <div 
-              key={i} 
-              onClick={() => handleClick(e.sectionId, e.title)} 
-              onMouseEnter={() => setIsHover(e.title)} 
-              onMouseLeave={() => setIsHover(null)}
-              className={`flex cursor-pointer py-3 px-4 rounded-md transition-all
-                ${activeNav === e.title ? "bg-blue-300/15 text-blue-500" : "hover:bg-blue-300/30 hover:text-blue-500"}`}
-            >
-              <div className='w-6'>
-                <FontAwesomeIcon 
-                  icon={faArrowRight} 
-                  className={`text-sm text-blue-700 transition-all duration-500 ease-in-out 
-                    ${isShowArrow ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2"}`}
-                />
-              </div>
-              <div className={`transition-all duration-300 ${isShowArrow ? "translate-x-2" : "" }`}>
-                {e.title}
-              </div>
+        return (
+          <div
+            key={i}
+            onClick={() => handleClick(e.sectionId, e.title)}
+            onMouseEnter={() => setIsHover(e.title)}
+            onMouseLeave={() => setIsHover(null)}
+            className={`flex cursor-pointer py-3 px-4 rounded-md transition-all
+                ${
+                  activeNav === e.title
+                    ? "bg-blue-300/15 text-blue-500"
+                    : "hover:bg-blue-300/30 hover:text-blue-500"
+                }`}
+          >
+            <div className="w-6">
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className={`text-sm text-blue-700 transition-all duration-500 ease-in-out 
+                    ${
+                      isShowArrow
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 -translate-x-2"
+                    }`}
+              />
             </div>
-          )
-        })
-      }
+            <div
+              className={`transition-all duration-300 ${
+                isShowArrow ? "translate-x-2" : ""
+              }`}
+            >
+              {e.title}
+            </div>
+          </div>
+        );
+      })}
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
