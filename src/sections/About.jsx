@@ -1,15 +1,16 @@
-import { data } from '../contents/about'
+import { data } from "../contents/about";
 
 const About = () => {
-
-  const SECTION_ID = `${data.title}-section`
+  const SECTION_ID = `${data.title}-section`;
 
   return (
-    <div id={SECTION_ID} className='scroll-m-14'>
-        <div className='font-semibold text-xl text-blue-500 mb-4'>{data.title}</div>
-        <div>{data.description}</div>
+    <div id={SECTION_ID} className="scroll-m-14">
+      <div className="font-semibold text-xl text-blue-500 mb-6">
+        {data.title}
+      </div>
+      <div>{data.description}</div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

@@ -22,9 +22,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const headerHeight = document.getElementById("header")?.offsetHeight || 0; // หาความสูง Header ถ้ามี
-      const offset = headerHeight + 100; // ปรับ offset ให้เหมาะสม (ประมาณ 100-150px)
-
+      const offset = 150; //ปรับ offset ให้เหมาะสม (ประมาณ 100-150px)
       // ตรวจสอบตำแหน่ง Scroll ปัจจุบัน
       const scrollPosition = window.scrollY;
 
@@ -38,7 +36,6 @@ const Navbar = () => {
         const section = document.getElementById(nav.sectionId);
         if (section) {
           const rect = section.getBoundingClientRect();
-          // เปลี่ยนเงื่อนไขเล็กน้อย:
           // ถ้าขอบบนของ Section อยู่เหนือเส้น Offset และขอบล่างยังไม่พ้นเส้น Offset
           if (rect.top <= offset && rect.bottom >= offset) {
             setActiveNav(nav.title);
