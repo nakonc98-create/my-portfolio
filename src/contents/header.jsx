@@ -1,4 +1,4 @@
-import myResume from '../assets/Resume_Technical Support.pdf'
+import myResume from '../assets/Resume_Programmer.pdf'
 import myPicture from '../assets/ProfilePic.jpg'
 
 export const data = {
