@@ -6,7 +6,6 @@ export const data = {
     { name: "Express.js" },
     { name: "TailwindCSS" },
     { name: "Git&GitHub" },
-    { name: "Docker" },
     { name: "Draw.io" },
     { name: "MongoDB" },
     { name: "VSCode" },
