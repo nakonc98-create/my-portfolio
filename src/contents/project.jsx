@@ -20,7 +20,8 @@ export const title = "Project";
 export const data = [
   {
     id: 1,
-    title: "Development of a No Code Programming application...",
+    title:
+      "Development of a No Code Programming application to check the time attendance system",
     duration: "ก.ค. 2566 - มี.ค. 2567",
     // 2. เปลี่ยนจาก picture เดี่ยว เป็น pictures (Array)
     pictures: getImages(project1Images),
