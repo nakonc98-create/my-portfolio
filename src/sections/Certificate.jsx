@@ -43,7 +43,10 @@ const Certificate = () => {
               className="h-full flex flex-col cursor-pointer rounded-xl bg-blue-900/50 overflow-hidden transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 shadow-lg group"
               onClick={() => setSelectedCert(e)}
             >
-              <div className="h-48 md:h-30 w-full overflow-hidden shrink-0">
+              <div
+                className="h-48 md:h-30 w-full overflow-hidden shrink-0"
+                title="คลิ๊กเพื่อดูรูปภาพขนาดเต็ม"
+              >
                 <img
                   src={e.image}
                   alt={e.title}
