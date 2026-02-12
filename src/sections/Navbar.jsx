@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 const navs = [
   { title: "About", sectionId: "About-section" },
   { title: "Skills", sectionId: "Skills-section" },
-  { title: "Tools", sectionId: "Tools-section" },
   { title: "Experience", sectionId: "Experience-section" },
   { title: "Project", sectionId: "Project-section" },
   { title: "Certificate", sectionId: "Certificate-section" },
