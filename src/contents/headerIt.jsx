@@ -1,4 +1,4 @@
-import myResume from "../assets/Resume_IT Support.pdf";
+import myResume from "../assets/resume/Resume_IT Support.pdf";
 import myPicture from "../assets/profile/01_profile.jpg";
 
 // 1. ดึงรูปทั้งหมดจากโฟลเดอร์ profile (เหมือนที่ทำใน project.jsx)

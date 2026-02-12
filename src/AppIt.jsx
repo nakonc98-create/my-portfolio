@@ -10,8 +10,8 @@ function AppIt() {
   return (
     <div className="bg-black md:bg-blue-950/30">
       <div className="mx-auto max-w-6xl gap-y-5 grid md:grid-cols-[30%_70%]">
-        <LeftSection headerDataIt={headerDataIt} />
-        <RightSection aboutDataIt={aboutDataIt} skillData={skillDataIt} />
+        <LeftSection headerData={headerDataIt} />
+        <RightSection aboutData={aboutDataIt} skillData={skillDataIt} />
       </div>
       <ScrollToTop />
     </div>
