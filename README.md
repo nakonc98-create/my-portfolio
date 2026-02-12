@@ -3,16 +3,15 @@
 ![Project Status](https://img.shields.io/badge/status-active-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
 
-ยินดีต้อนรับสู่โปรเจกต์ **Personal Portfolio** ของผม! เว็บไซต์นี้ถูกพัฒนาขึ้นเพื่อรวบรวมผลงาน ประวัติ และทักษะความสามารถ โดยมีความพิเศษคือการ **แบ่งโปรไฟล์ออกเป็น 2 เส้นทาง** (IT Support และ Developer) เพื่อแสดงศักยภาพในแต่ละด้านได้อย่างชัดเจน
+ยินดีต้อนรับสู่โปรเจกต์ **Personal Portfolio** ของผม! เว็บไซต์นี้ถูกพัฒนาขึ้นเพื่อรวบรวมผลงาน ประวัติ และทักษะความสามารถ
 
 ---
 
 ## 🎨 ภาพรวมโปรเจกต์ (Project Overview)
 
-เว็บไซต์นี้เป็น **Single Page Application (SPA)** ที่เน้นความรวดเร็ว ทันสมัย และ Responsive โดยหน้าแรกจะเปิดโอกาสให้ผู้เข้าชมเลือกดูข้อมูลตามความสนใจระหว่างสายงาน **IT Support** หรือ **Developer**
+เว็บไซต์นี้เป็น **Single Page Application (SPA)** ที่เน้นความรวดเร็ว ทันสมัย และ Responsive
 
 ### ✨ ฟีเจอร์เด่น (Key Features)
-* **Dual Profile Landing Page:** หน้าต้อนรับที่ให้เลือกเส้นทางระหว่าง IT Support และ Developer พร้อม Animation ที่น่าสนใจ
 * **Modern UI/UX:** ดีไซน์ด้วย **Tailwind CSS** ในธีม Dark Mode ให้ความรู้สึกเป็นมืออาชีพและสบายตา
 * **Responsive Design:** รองรับการแสดงผลทุกหน้าจอ ทั้ง Mobile, Tablet และ Desktop
 * **Fast Performance:** พัฒนาด้วย **Vite** และ **React 19** ทำให้โหลดไวและลื่นไหล
@@ -46,9 +45,9 @@ portfolio/
 │   ├── assets/          # รูปภาพโปรไฟล์, รูปผลงาน, Resume PDF
 │   ├── components/      # UI Components ที่ใช้ซ้ำ (Buttons, Cards, Titles)
 │   ├── contents/        # ข้อมูล Text ต่างๆ (Data-driven content)
-│   │   ├── aboutDev.jsx    # ข้อมูลส่วนตัวฝั่ง Developer
-│   │   ├── project.jsx     # ข้อมูลโปรเจกต์ต่างๆ
-│   │   ├── skillDev.jsx    # ข้อมูลทักษะ
+│   │   ├── aboutIt.jsx    # ข้อมูลส่วนตัวฝั่ง It Support
+│   │   ├── project.jsx    # ข้อมูลโปรเจกต์ต่างๆ
+│   │   ├── skillIt.jsx    # ข้อมูลทักษะ
 │   │   └── ...
 │   ├── sections/        # ส่วนประกอบหลักของหน้าเว็บ (Header, Navbar, Footer)
 │   ├── App.jsx          # หน้า Landing Page หลัก (Select Profile)
@@ -81,6 +80,3 @@ npm run deploy
 
 👤 ติดต่อ (Contact)
 Nakon Charoenruk Programmer & IT Support
-<p align="center">
-Built with ❤️ by Nakon Charoenruk
-</p>
