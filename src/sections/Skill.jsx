@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { data } from "../contents/skill";
 
-const Skill = () => {
+const Skill = ({ data }) => {
   const SECTION_ID = `${data.title}-section`;
 
   // 1. สร้าง Ref เพื่ออ้างอิงถึง Element ก้อนใหญ่ของ Skill

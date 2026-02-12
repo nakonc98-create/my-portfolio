@@ -1,9 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { data } from "../contents/header";
 import { useState, useEffect } from "react"; // เพิ่ม useEffect
 
-const Header = () => {
+const Header = ({ data }) => {
   const [isHover, setIsHover] = useState(false);
 
   // State สำหรับ Modal
