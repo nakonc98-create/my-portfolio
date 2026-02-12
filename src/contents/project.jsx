@@ -41,8 +41,8 @@ export const data = [
     // ใช้รูปจากโฟลเดอร์ project2
     pictures: getImages(project2Images),
     description:
-      "โครงงานนี้จึงจัดทำขึ้นเพื่อพัฒนาระบบแจ้งซ่อมที่ทันสมัย รวดเร็ว และประหยัดงบประมาณ โดยประยุกต์ใช้ Google Sheets เป็นฐานข้อมูลกลาง และใช้ Google Apps Script เป็นตัวขับเคลื่อนการทำงานอัตโนมัติ (Automation) เชื่อมต่อระหว่างผู้แจ้งและช่างซ่อมบำรุงแบบ Real-time",
-    skill: ["Google Apps Script", "Google Sheet"],
+      "โครงงานนี้จึงจัดทำขึ้นเพื่อพัฒนาระบบแจ้งซ่อมที่ทันสมัย รวดเร็ว และประหยัดงบประมาณ โดยประยุกต์ใช้ Google Sheets เป็นฐานข้อมูลกลางใช้ Google Apps Script เป็นตัวขับเคลื่อนการทำงานอัตโนมัติ (Automation) เชื่อมต่อระหว่างผู้แจ้งและช่างซ่อมบำรุงแบบ Real-time ผ่านแอพพลิเคชั่น LINE",
+    skill: ["Google Apps Script", "Google Sheet", "LINE"],
     material: [
       /*{ icon: faGithub, link: "" },
       { icon: faFileLines, link: "" },

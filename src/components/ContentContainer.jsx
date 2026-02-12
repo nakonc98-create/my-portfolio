@@ -62,10 +62,7 @@ const ContentContainer = (props) => {
         {props.title}
       </div>
       {props.data.map((e, i) => (
-        <div
-          className="grid grid-cols-1 md:grid-cols-[30%_70%] shadow-sm hover:bg-blue-900/30 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 py-4 rounded-md"
-          key={i}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-[30%_70%] py-4" key={i}>
           <div className="flex flex-col gap-y-4">
             <Date value={e.duration} />
             {/* ในหน้า list แสดงเฉพาะรูปแรก (รูปปก) */}
