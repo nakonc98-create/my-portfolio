@@ -1,6 +1,4 @@
-import { data } from "../contents/about";
-
-const About = () => {
+const About = ({ data }) => {
   const SECTION_ID = `${data.title}-section`;
 
   return (

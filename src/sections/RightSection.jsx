@@ -6,12 +6,12 @@ import Footer from "./Footer";
 import Certificate from "./Certificate";
 import Skill from "./Skill";
 
-const RightSection = () => {
+const RightSection = ({ aboutData, skillData }) => {
   return (
     <div className="pt-14 md:bg-black/50">
       <div className="flex flex-col gap-y-20 md:gap-y-60 px-7">
-        <About />
-        <Skill />
+        <About data={aboutData} />
+        <Skill data={skillData} />
         <ContentContainer title={expTitle} data={expData} />
         <ContentContainer title={proTitle} data={proData} />
         <Certificate />

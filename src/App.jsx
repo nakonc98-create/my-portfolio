@@ -1,18 +1,29 @@
-import "./App.css";
-import ScrollToTop from "./components/ScrollToTop";
-import LeftSection from "./sections/LeftSection";
-import RightSection from "./sections/RightSection";
+import { Link } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="bg-black md:bg-blue-950/30">
-      <div className="mx-auto max-w-6xl gap-y-5 grid md:grid-cols-[30%_70%]">
-        <LeftSection />
-        <RightSection />
+    <div className="min-h-screen bg-black flex flex-col items-center justify-center gap-8 text-white">
+      <h1 className="text-4xl md:text-5xl font-bold text-blue-500 mb-4 animate-bounce">
+        Select Profile
+      </h1>
+
+      <div className="flex flex-col md:flex-row gap-6">
+        {/* ปุ่มไปหน้า IT Support */}
+        <Link to="/it">
+          <button className="w-64 py-4 bg-blue-900 border border-blue-500 rounded-xl hover:bg-blue-700 hover:scale-105 transition duration-300 text-xl font-semibold shadow-[0_0_20px_rgba(59,130,246,0.5)]">
+            IT Support
+          </button>
+        </Link>
+
+        {/* ปุ่มไปหน้า Developer */}
+        <Link to="/dev">
+          <button className="w-64 py-4 bg-gray-800 border border-gray-600 rounded-xl hover:bg-gray-700 hover:scale-105 transition duration-300 text-xl font-semibold shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+            Developer
+          </button>
+        </Link>
       </div>
-      <ScrollToTop />
     </div>
   );
-}
+};
 
 export default App;
