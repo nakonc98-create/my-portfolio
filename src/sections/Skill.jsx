@@ -41,23 +41,15 @@ const Skill = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {data.items.map((skill, index) => (
-          <div key={index} className="bg-blue-900/50 p-4 rounded-lg shadow-sm">
+          <div
+            key={index}
+            className="bg-gray-300 p-4 rounded-lg shadow-sm group transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] hover:scale-102 hover:bg-blue-300"
+          >
             <div className="flex justify-between items-center mb-2">
-              <span className="font-semibold text-white">{skill.name}</span>
-              <span className="text-xs font-medium text-blue-900 bg-slate-200 px-2 py-1 rounded">
-                {skill.level}
-              </span>
+              <span className="font-semibold text-blue-900">{skill.name}</span>
             </div>
-
-            {/* Progress Bar Background */}
-            <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
-              {/* 3. เพิ่ม className 'progress-bar' และเช็ค isVisible เพื่อเติม 'animate' */}
-              <div
-                className={`h-2.5 rounded-full bg-blue-500 progress-bar ${
-                  isVisible ? "animate" : ""
-                }`}
-                style={{ width: `${skill.percentage}%` }}
-              ></div>
+            <div>
+              <span className="text-sm text-black">{skill.details}</span>
             </div>
           </div>
         ))}
