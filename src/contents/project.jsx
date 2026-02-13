@@ -6,11 +6,11 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 // หมายเหตุ: ตรวจสอบ path โฟลเดอร์ให้ถูกต้องตามโครงสร้างไฟล์จริงของคุณ
 const project1Images = import.meta.glob(
   "../assets/project1/*.{png,jpg,jpeg,svg}",
-  { eager: true, import: "default" }
+  { eager: true, import: "default" },
 );
 const project2Images = import.meta.glob(
   "../assets/project2/*.{png,jpg,jpeg,svg}",
-  { eager: true, import: "default" }
+  { eager: true, import: "default" },
 );
 
 // ฟังก์ชันช่วยแปลง Object ที่ได้จาก glob ให้เป็น Array ของ URL รูปภาพ
