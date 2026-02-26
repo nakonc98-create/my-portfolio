@@ -43,14 +43,14 @@ portfolio/
 ├── public/              # Static assets (icons, svg)
 ├── src/
 │   ├── assets/          # รูปภาพโปรไฟล์, รูปผลงาน, Resume PDF
-│   ├── components/      # UI Components ที่ใช้ซ้ำ (Buttons, Cards, Titles)
-│   ├── contents/        # ข้อมูล Text ต่างๆ (Data-driven content)
-│   │   ├── aboutIt.jsx    # ข้อมูลส่วนตัวฝั่ง It Support
+│   ├── components/      # UI Components ที่ใช้ซ้ำ
+│   ├── contents/        # ข้อมูล Text ต่างๆ
+│   │   ├── aboutIt.jsx    # ข้อมูลส่วนตัว
 │   │   ├── project.jsx    # ข้อมูลโปรเจกต์ต่างๆ
 │   │   ├── skillIt.jsx    # ข้อมูลทักษะ
 │   │   └── ...
-│   ├── sections/        # ส่วนประกอบหลักของหน้าเว็บ (Header, Navbar, Footer)
-│   ├── App.jsx          # หน้า Landing Page หลัก (Select Profile)
+│   ├── sections/        # ส่วนประกอบหลักของหน้าเว็บ
+│   ├── App.jsx          # หน้า Landing Page หลัก
 │   └── main.jsx         # Entry point
 └── package.json         # Dependencies & Scripts
 

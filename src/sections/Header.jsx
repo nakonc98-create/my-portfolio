@@ -1,19 +1,20 @@
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react"; // เพิ่ม useEffect
 
 const Header = ({ data }) => {
+  // ==============================
+  // 1. State Management
+  // ==============================
   const [isHover, setIsHover] = useState(false);
-
-  // State สำหรับ Modal
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // ฟังก์ชันเปิด Modal
+  // ==============================
+  // 2. Handlers (Modal & Images)
+  // ==============================
   const openModal = () => {
     setIsOpen(true);
-    // หา index ของรูปหลักใน array (ถ้ามี) เพื่อเริ่มแสดงที่รูปนั้น หรือเริ่มที่ 0
-    // ในที่นี้เริ่มที่ 0 หรือจะเขียน logic เพิ่มก็ได้
     setCurrentImageIndex(0);
   };
 
@@ -22,7 +23,6 @@ const Header = ({ data }) => {
     setCurrentImageIndex(0);
   };
 
-  // ฟังก์ชันเลื่อนรูป
   const nextImage = (e) => {
     e.stopPropagation();
     if (data.pictures && data.pictures.length > 1) {
@@ -34,12 +34,14 @@ const Header = ({ data }) => {
     e.stopPropagation();
     if (data.pictures && data.pictures.length > 1) {
       setCurrentImageIndex((prev) =>
-        prev === 0 ? data.pictures.length - 1 : prev - 1
+        prev === 0 ? data.pictures.length - 1 : prev - 1,
       );
     }
   };
 
-  // จัดการปุ่มกด (ESC, Arrow Keys)
+  // ==============================
+  // 3. Effects (Keyboard Events)
+  // ==============================
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!isOpen) return;
@@ -49,7 +51,7 @@ const Header = ({ data }) => {
     };
 
     if (isOpen) {
-      document.body.style.overflow = "hidden"; // ป้องกันการ scroll พื้นหลัง
+      document.body.style.overflow = "hidden";
       window.addEventListener("keydown", handleKeyDown);
     } else {
       document.body.style.overflow = "auto";
@@ -61,38 +63,43 @@ const Header = ({ data }) => {
     };
   }, [isOpen, currentImageIndex]);
 
+  // ==============================
+  // 4. Render
+  // ==============================
   return (
     <div className="flex flex-col gap-2 mt-10 md:mt-0" id="header">
+      {/* Profile Info */}
       <div className="text-3xl text-blue-700 font-semibold">{data.name}</div>
       <div className="font-semibold text-xl text-blue-500">{data.title}</div>
 
-      {/* ส่วนรูปภาพโปรไฟล์หลัก (เพิ่ม onClick) */}
+      {/* Main Profile Image */}
       <div className="flex justify-center">
         <div
-          className="cursor-pointer transition duration-300 ease-in-out hover:scale-102 hover:opacity-90"
+          className="cursor-pointer transition duration-300 ease-in-out hover:scale-102 hover:opacity-90 group"
           onClick={openModal}
           title="คลิ๊กเพื่อดูรูปภาพเพิ่มเติม"
         >
           <img
             src={data.picture}
             alt={data.name}
-            className="w-50 md:w-40 h-50 md:h-40 rounded-full object-cover object-top my-10 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 shadow-sm group hover:shadow-[0_0_50px_rgba(59,130,246,1)]"
+            className="w-50 md:w-40 h-50 md:h-40 rounded-full object-cover object-top my-10 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 shadow-sm hover:shadow-[0_0_50px_rgba(59,130,246,1)]"
           />
         </div>
       </div>
 
+      {/* Resume Button */}
       <div
         className="flex justify-center mt-4 font-semibold"
         title="คลิ๊กเพื่อดูเรซูเม่"
       >
         <a href={data.resume} target="_blank" rel="noreferrer">
           <span
-            className="bg-blue-900 py-2 px-2 rounded-md hover:bg-white hover:text-blue-900 hover:ring-3 ring-blue-900 duration-300"
+            className="bg-blue-900 py-2 px-2 rounded-md hover:bg-white hover:text-blue-900 hover:ring-3 ring-blue-900 duration-300 flex items-center"
             onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
           >
             {data.btnName}
-            <span className="inline-block text-xs ml-1">
+            <span className="inline-block text-xs ml-2">
               <FontAwesomeIcon
                 className={`size-6 ${isHover ? "animate-bounce" : ""}`}
                 icon={faArrowDown}
@@ -102,7 +109,7 @@ const Header = ({ data }) => {
         </a>
       </div>
 
-      {/* --- MODAL IMAGE SLIDER (Code จาก ContentContainer มาปรับใช้) --- */}
+      {/* Image Slider Modal */}
       {isOpen && data.pictures && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-2 md:p-4 animate-fadeIn"
@@ -156,11 +163,11 @@ const Header = ({ data }) => {
               </button>
             )}
 
-            {/* Main Image */}
+            {/* Main Display Image */}
             <img
               className="w-full h-auto max-h-[70vh] object-contain rounded-lg shadow-2xl border border-gray-700/50 animate-zoomIn transition-all duration-300"
               src={data.pictures[currentImageIndex]}
-              alt={`${data.name} ${currentImageIndex + 1}`}
+              alt={`${data.name} preview ${currentImageIndex + 1}`}
             />
 
             {/* Next Button */}
@@ -186,13 +193,14 @@ const Header = ({ data }) => {
               </button>
             )}
 
-            {/* Image Counter */}
+            {/* Image Counter Badge */}
             {data.pictures.length > 1 && (
               <div className="absolute -top-10 bg-blue-900/50 text-white px-3 py-1 rounded-full text-sm">
                 {currentImageIndex + 1} / {data.pictures.length}
               </div>
             )}
 
+            {/* Name Label */}
             <div className="mt-2 text-white text-sm md:text-lg font-medium bg-gray-900/80 px-4 py-1 md:px-6 md:py-2 rounded-full border border-blue-700 animate-fadeIn text-center">
               {data.name}
             </div>
