@@ -3,10 +3,8 @@ const About = ({ data }) => {
 
   return (
     <div id={SECTION_ID} className="scroll-m-14">
-      <div className="font-semibold text-xl text-blue-500 mb-6">
-        {data.title}
-      </div>
-      <div>{data.description}</div>
+      <h2 className="font-semibold text-xl text-blue-500 mb-6">{data.title}</h2>
+      <p className="text-gray-300">{data.description}</p>
     </div>
   );
 };

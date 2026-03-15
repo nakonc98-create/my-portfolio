@@ -2,13 +2,9 @@ export const data = {
   title: "Skills",
   items: [
     {
-      name: "Knowledge of Network",
-      details: "TCP/IP, DNS, DHCP, LAN/WAN, VPN, Firewalls, Router/Switch",
-    },
-    {
-      name: "Basic Network Troubleshooting",
+      name: "Networking (Basic)",
       details:
-        "การวินิจฉัยปัญหาการเชื่อมต่อโดยใช้ command-line tools (ping, ipconfig, tracert, nslookup, ARP -a)",
+        "TCP/IP, DNS, DHCP, LAN/WAN, VPN, Firewalls, Router/Switch, การวินิจฉัยปัญหาการเชื่อมต่อโดยใช้ command-line tools (ping, ipconfig, tracert, nslookup, ARP -a)",
     },
     {
       name: "Hardware & OS",
@@ -17,11 +13,15 @@ export const data = {
     {
       name: "Software & Tools",
       details:
-        "MS Office 365, Remote Desktop (TeamViewer, AnyDesk), Antivirus Management.",
+        "MS Office 365 (Word, PowerPoint, Excel, OneDrive, Teams, Outlook, SharePoint, List, Power Apps, Power Automate, Power BI), Remote Desktop (TeamViewer, AnyDesk), Figma, Canva, Draw.io, Git&Github, Docker, Arduino, Glide, VsCode, Gemini, NotebookLM",
     },
     {
       name: "Programming (Basic)",
-      details: "Bash Scripting, HTML/CSS/Javascript",
+      details: "Bash Scripting, C, HTML, CSS, Javascript, React.js, Node.js",
+    },
+    {
+      name: "Database",
+      details: "MongoDB, Supabase, Airtable",
     },
   ],
 };
