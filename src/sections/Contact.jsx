@@ -8,7 +8,7 @@ import { data } from "../contents/contact";
 
 const Contact = () => {
   return (
-    <div className="flex items-end justify-center md:justify-normal text-2xl gap-4 mt-4">
+    <div className="flex items-end justify-center md:justify-normal text-2xl gap-4 mt-2">
       {data.map((e, i) => (
         <a
           key={i}
