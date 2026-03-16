@@ -8,7 +8,7 @@ import Skill from "./Skill";
 
 const RightSection = ({ aboutData, skillData }) => {
   return (
-    <div className="pt-14 md:bg-black/50">
+    <div className="pt-5 md:bg-black/50">
       <div className="flex flex-col gap-y-20 md:gap-y-60 px-7">
         <About data={aboutData} />
         <Skill data={skillData} />

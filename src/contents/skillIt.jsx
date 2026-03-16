@@ -2,19 +2,26 @@ export const data = {
   title: "Skills",
   items: [
     {
-      name: "Networking (Basic)",
+      name: "Basic Networking",
       details:
         "TCP/IP, DNS, DHCP, LAN/WAN, VPN, Firewalls, Router/Switch, การวินิจฉัยปัญหาการเชื่อมต่อโดยใช้ command-line tools (ping, ipconfig, tracert, nslookup, ARP -a)",
     },
     {
-      name: "Hardware & OS",
-      details: "PC Assembly, OS Installation & Deployment (Windows 10/11)",
+      name: "Tools",
+      details:
+        "Remote Desktop (TeamViewer, AnyDesk), Figma, Canva, Draw.io, Git&Github, Docker, Arduino, Glide, VsCode, Gemini, NotebookLM",
     },
     {
-      name: "Software & Tools",
+      name: "MS Office 365",
       details:
-        "MS Office 365 (Word, PowerPoint, Excel, OneDrive, Teams, Outlook, SharePoint, List, Power Apps, Power Automate, Power BI), Remote Desktop (TeamViewer, AnyDesk), Figma, Canva, Draw.io, Git&Github, Docker, Arduino, Glide, VsCode, Gemini, NotebookLM",
+        "Word, PowerPoint, Excel, OneDrive, Teams, Outlook, SharePoint, List, Power Apps, Power Automate, Power BI",
     },
+    {
+      name: "Hardware & OS",
+      details:
+        "PC Assembly, OS Installation & Deployment (Windows 10/11), Linux/Unix Commands",
+    },
+
     {
       name: "Programming (Basic)",
       details: "Bash Scripting, C, HTML, CSS, Javascript, React.js, Node.js",

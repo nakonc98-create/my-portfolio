@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   return (
-    <div className="flex justify-center md:justify-end mb-12 hover:text-blue-500 duration-300">
+    <div className="flex justify-center md:justify-end mb-5 hover:text-blue-500 duration-300">
       <span>
         <a
           href="https://github.com/nakonc98-create/my-portfolio.git"

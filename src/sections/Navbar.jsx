@@ -53,7 +53,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="hidden md:flex flex-col font-semibold pt-10">
+    <div className="hidden md:flex flex-col font-semibold mt-1">
       {navs.map((e, i) => {
         const isShowArrow = isHover === e.title || activeNav === e.title;
 

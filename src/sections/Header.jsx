@@ -82,14 +82,14 @@ const Header = ({ data }) => {
           <img
             src={data.picture}
             alt={data.name}
-            className="w-50 md:w-40 h-50 md:h-40 rounded-full object-cover object-top my-10 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 shadow-sm hover:shadow-[0_0_50px_rgba(59,130,246,1)]"
+            className="w-50 md:w-40 h-50 md:h-40 rounded-full object-cover object-top my-3 transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 shadow-sm hover:shadow-[0_0_50px_rgba(59,130,246,1)]"
           />
         </div>
       </div>
 
       {/* Resume Button */}
       <div
-        className="flex justify-center mt-4 font-semibold"
+        className="flex justify-center font-semibold"
         title="คลิ๊กเพื่อดูเรซูเม่"
       >
         <a href={data.resume} target="_blank" rel="noreferrer">
