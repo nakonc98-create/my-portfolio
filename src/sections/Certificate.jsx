@@ -38,13 +38,13 @@ const Certificate = () => {
       {/* Grid Container */}
       <div className="grid grid-cols-1 md:grid-cols-3">
         {data.map((e, i) => (
-          <div className="px-15 md:px-3 py-4 md:py-2" key={i}>
+          <div className="px-8 md:px-3 py-4 md:py-2" key={i}>
             <div
               className="h-full flex flex-col cursor-pointer rounded-xl bg-blue-900/50 overflow-hidden transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 shadow-lg group"
               onClick={() => setSelectedCert(e)}
             >
               <div
-                className="h-48 md:h-30 w-full overflow-hidden shrink-0"
+                className="h-48 md:h-38 w-full overflow-hidden shrink-0"
                 title="คลิ๊กเพื่อดูรูปภาพขนาดเต็ม"
               >
                 <img
