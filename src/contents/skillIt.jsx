@@ -9,7 +9,7 @@ export const data = {
     {
       name: "Tools",
       details:
-        "Remote Desktop (TeamViewer, AnyDesk), Figma, Canva, Draw.io, Git&Github, Docker, Arduino, Glide, VsCode, Gemini, NotebookLM",
+        "Remote Desktop (TeamViewer, AnyDesk), Figma, Canva, Draw.io, Git&Github, Docker, Glide, VsCode, Gemini, NotebookLM",
     },
     {
       name: "MS Office 365",
@@ -24,7 +24,8 @@ export const data = {
 
     {
       name: "Programming (Basic)",
-      details: "Bash Scripting, C, HTML, CSS, Javascript, React.js, Node.js",
+      details:
+        "Bash Scripting, C, HTML, CSS, Javascript, React.js, Node.js, Tailwind CSS, Bootstrap",
     },
     {
       name: "Database",
